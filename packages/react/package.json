@@ -1,0 +1,26 @@
+{
+  "name": "@woody-ui/react",
+  "version": "0.0.0",
+  "description": "Componenti React per Woody — accessibili, tematizzabili, tipizzati",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "echo 'React build: da configurare con tsup'",
+    "dev": "echo 'React dev: da configurare con tsup --watch'",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "test": "echo 'Test: da configurare con Vitest'",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@woody-ui/css": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@woody-ui/tokens",
+  "version": "0.0.0",
+  "description": "Design tokens per Woody — dalla Figma Variables al codice",
+  "license": "MIT",
+  "main": "dist/tokens.json",
+  "types": "dist/tokens.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "echo 'Token build: da configurare con Style Dictionary'",
+    "clean": "rm -rf dist"
+  }
+}

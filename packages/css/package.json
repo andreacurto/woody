@@ -1,0 +1,19 @@
+{
+  "name": "@woody-ui/css",
+  "version": "0.0.0",
+  "description": "Stili CSS framework-agnostic per Woody — reset, element, component, utilities",
+  "license": "MIT",
+  "main": "dist/woody.css",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "echo 'CSS build: da configurare con PostCSS'",
+    "dev": "echo 'CSS dev: da configurare con PostCSS --watch'",
+    "lint": "stylelint 'src/**/*.css'",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@woody-ui/tokens": "workspace:*"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "woody",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Modular, accessible design system for landing pages, marketing sites & e-commerce. From Figma to code.",
+  "author": "Andrea Curto",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreacurto/woody.git"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:css": "stylelint \"packages/css/src/**/*.css\"",
+    "lint:js": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules"
+  }
+}
