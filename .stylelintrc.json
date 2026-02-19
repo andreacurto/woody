@@ -19,7 +19,6 @@
       }
     ],
     "declaration-no-important": true,
-    "font-size-no-unknown-units": null,
     "order/properties-order": [
       [
         "display",

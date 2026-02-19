@@ -2,6 +2,7 @@
   "name": "woody",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "Modular, accessible design system for landing pages, marketing sites & e-commerce. From Figma to code.",
   "author": "Andrea Curto",
   "license": "MIT",
@@ -19,10 +20,24 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "lint:css": "stylelint \"packages/css/src/**/*.css\"",
-    "lint:js": "eslint . --ext .ts,.tsx",
+    "lint:js": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "turbo run test",
     "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "prettier": "^3.8.1",
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-order": "^7.0.1",
+    "turbo": "^2.8.10",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.0"
   }
 }
