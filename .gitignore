@@ -15,7 +15,7 @@ build/
 !.env.example
 
 # IDE
-.vscode/
+.vscode/*
 !.vscode/extensions.json
 .idea/
 *.swp
@@ -39,3 +39,6 @@ storybook-static/
 
 # Chromatic
 chromatic-results/
+
+# Documenti privati
+WOODY_PROJECT_CHARTER.md

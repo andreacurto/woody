@@ -4,7 +4,7 @@
 > Viene letto automaticamente da Claude Code (VS Code) e puÃ² essere usato come
 > contesto nel Claude Project su claude.ai.
 >
-> **Ultima modifica:** 2026-02-09
+> **Ultima modifica:** 2026-02-19
 > **Versione progetto:** 0.x (pre-release, in sviluppo attivo)
 
 ---
@@ -177,7 +177,8 @@ main                        â† protetto, sempre deployabile
   â””â”€â”€ refactor/tokens       â† refactoring
 ```
 
-Niente push diretti su `main`. Solo PR con squash merge.
+- Niente push diretti su `main`. Solo PR con squash merge
+- Prima di ogni PR, Claude propone la strategia (branch, commit, scope), il Designer approva, poi si agisce
 
 ### Commit
 
@@ -207,6 +208,33 @@ chore(deps): aggiorna postcss alla 8.5
 - Massimo 72 caratteri per la prima riga
 - Non terminare con punto
 - Se serve un body, lascia una riga vuota dopo il subject
+
+### PR naming
+
+Il titolo della PR segue lo stesso formato del commit (diventa il commit squash su `main`):
+
+```
+type(scope): descrizione in italiano
+```
+
+Esempi:
+```
+chore(ci): aggiunge GitHub Actions workflow per lint e build
+feat(tokens): aggiunge pipeline Style Dictionary con token base
+docs(charter): aggiorna workflow git e convenzioni PR
+```
+
+### Versionamento e tag
+
+I tag seguono Semantic Versioning e vengono creati **automaticamente** da GitHub Actions solo su `main`, in seguito al merge di una Release PR generata da Changesets.
+
+Flusso:
+1. Durante lo sviluppo, ogni modifica significativa include un changeset (`pnpm changeset`)
+2. Changesets apre automaticamente una Release PR con bump versione e CHANGELOG aggiornato
+3. Il Designer revisiona e approva la Release PR
+4. Al merge su `main`, GitHub Actions crea il tag e pubblica il rilascio
+
+I tag non vengono mai creati manualmente né nei branch di sviluppo.
 
 ---
 
